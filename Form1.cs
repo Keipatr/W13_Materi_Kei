@@ -70,13 +70,16 @@ namespace w13_Kei
             {
                 MessageBox.Show("Data sudah paling awal");
             }
-            urutan = 0;
-            tb_PlayerId.Text = dtPlayer.Rows[urutan]["player_id"].ToString();
-            tb_PlayerName.Text = dtPlayer.Rows[urutan]["player_name"].ToString();
-            dtp_Birth.Text = dtPlayer.Rows[urutan]["birthdate"].ToString();
-            cb_Nation.Text = dtPlayer.Rows[urutan]["nation"].ToString();
-            cb_Team.Text = dtPlayer.Rows[urutan]["team_name"].ToString();
-            nup_TeamNumber.Value = Convert.ToInt16(dtPlayer.Rows[urutan]["team_number"]);
+            else
+            {
+                urutan = 0;
+                tb_PlayerId.Text = dtPlayer.Rows[urutan]["player_id"].ToString();
+                tb_PlayerName.Text = dtPlayer.Rows[urutan]["player_name"].ToString();
+                dtp_Birth.Text = dtPlayer.Rows[urutan]["birthdate"].ToString();
+                cb_Nation.Text = dtPlayer.Rows[urutan]["nation"].ToString();
+                cb_Team.Text = dtPlayer.Rows[urutan]["team_name"].ToString();
+                nup_TeamNumber.Value = Convert.ToInt16(dtPlayer.Rows[urutan]["team_number"]);
+            }       
             cekTim = cb_Team.SelectedValue.ToString();
         }
 
@@ -86,13 +89,16 @@ namespace w13_Kei
             {
                 MessageBox.Show("Data sudah paling akhir");
             }
-            urutan = 858;
-            tb_PlayerId.Text = dtPlayer.Rows[urutan]["player_id"].ToString();
-            tb_PlayerName.Text = dtPlayer.Rows[urutan]["player_name"].ToString();
-            dtp_Birth.Text = dtPlayer.Rows[urutan]["birthdate"].ToString();
-            cb_Nation.Text = dtPlayer.Rows[urutan]["nation"].ToString();
-            cb_Team.Text = dtPlayer.Rows[urutan]["team_name"].ToString();
-            nup_TeamNumber.Value = Convert.ToInt16(dtPlayer.Rows[urutan]["team_number"]);
+            else
+            {
+                urutan = 858;
+                tb_PlayerId.Text = dtPlayer.Rows[urutan]["player_id"].ToString();
+                tb_PlayerName.Text = dtPlayer.Rows[urutan]["player_name"].ToString();
+                dtp_Birth.Text = dtPlayer.Rows[urutan]["birthdate"].ToString();
+                cb_Nation.Text = dtPlayer.Rows[urutan]["nation"].ToString();
+                cb_Team.Text = dtPlayer.Rows[urutan]["team_name"].ToString();
+                nup_TeamNumber.Value = Convert.ToInt16(dtPlayer.Rows[urutan]["team_number"]);
+            }
             cekTim = cb_Team.SelectedValue.ToString();
         }
 
@@ -111,8 +117,8 @@ namespace w13_Kei
                 cb_Nation.Text = dtPlayer.Rows[urutan]["nation"].ToString();
                 cb_Team.Text = dtPlayer.Rows[urutan]["team_name"].ToString();
                 nup_TeamNumber.Value = Convert.ToInt16(dtPlayer.Rows[urutan]["team_number"]);
-                cekTim = cb_Team.SelectedValue.ToString();
             }
+            cekTim = cb_Team.SelectedValue.ToString();
         }
 
         private void btn_Next_Click(object sender, EventArgs e)
@@ -129,9 +135,9 @@ namespace w13_Kei
                 dtp_Birth.Text = dtPlayer.Rows[urutan]["birthdate"].ToString();
                 cb_Nation.Text = dtPlayer.Rows[urutan]["nation"].ToString();
                 cb_Team.Text = dtPlayer.Rows[urutan]["team_name"].ToString();
-                nup_TeamNumber.Value = Convert.ToInt16(dtPlayer.Rows[urutan]["team_number"]);
-                cekTim = cb_Team.SelectedValue.ToString();
+                nup_TeamNumber.Value = Convert.ToInt16(dtPlayer.Rows[urutan]["team_number"]);  
             }
+            cekTim = cb_Team.SelectedValue.ToString();
         }
         private void btn_Save_Click(object sender, EventArgs e)
         {
