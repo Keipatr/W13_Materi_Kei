@@ -182,15 +182,16 @@
             this.nup_TeamNumber.Name = "nup_TeamNumber";
             this.nup_TeamNumber.Size = new System.Drawing.Size(120, 20);
             this.nup_TeamNumber.TabIndex = 15;
+            this.nup_TeamNumber.ValueChanged += new System.EventHandler(this.nup_TeamNumber_ValueChanged);
             // 
             // lb_Available
             // 
             this.lb_Available.AutoSize = true;
             this.lb_Available.Location = new System.Drawing.Point(317, 316);
             this.lb_Available.Name = "lb_Available";
-            this.lb_Available.Size = new System.Drawing.Size(70, 13);
+            this.lb_Available.Size = new System.Drawing.Size(50, 13);
             this.lb_Available.TabIndex = 16;
-            this.lb_Available.Text = "Not Available";
+            this.lb_Available.Text = "Available";
             // 
             // btn_Save
             // 
